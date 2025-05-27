@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1696579948855" clover="3.2.0">
+  <project timestamp="1696579948856" name="All files">
+    <metrics statements="43" coveredstatements="41" conditionals="0" coveredconditionals="0" methods="21" coveredmethods="12" elements="64" coveredelements="53" complexity="0" loc="43" ncloc="43" packages="6" files="8" classes="8"/>
+    <package name="controller">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="product.controller.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\controller\product.controller.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="dao.models">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cart.model.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\dao\models\cart.model.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="product.model.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\dao\models\product.model.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="dao.schemas">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="cart.shema.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\dao\schemas\cart.shema.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="product.schema.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\dao\schemas\product.schema.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="routes">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="product.routes.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\routes\product.routes.js">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="service">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="product.service.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\service\product.service.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="service.impl">
+      <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+      <file name="product.serviceImpl.js" path="C:\Data\Code\NodeJS\pwc\beginner\modules\product\service\impl\product.serviceImpl.js">
+        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
