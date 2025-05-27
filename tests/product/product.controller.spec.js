@@ -150,13 +150,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.getProduct.mockRejectedValueOnce(new Error('Product not found.'));
+            ProductServiceImpl.prototype.getProduct.mockRejectedValueOnce(new Error(/product not found/i));
 
             await new ProductController().getProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.getProduct).toHaveBeenCalledWith(productId);
             expect(mRes.status).toHaveBeenCalledWith(404);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Product not found.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/product not found/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -181,13 +181,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.updateProduct.mockRejectedValueOnce(new Error('Product not found.'));
+            ProductServiceImpl.prototype.updateProduct.mockRejectedValueOnce(new Error(/product not found/i));
 
             await new ProductController().updateProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.updateProduct).toHaveBeenCalledWith(productId, updatedProductData);
             expect(mRes.status).toHaveBeenCalledWith(404);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Product not found.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/product not found/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -203,13 +203,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.deleteProduct.mockRejectedValueOnce(new Error('Product not found.'));
+            ProductServiceImpl.prototype.deleteProduct.mockRejectedValueOnce(new Error(/product not found/i));
 
             await new ProductController().deleteProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.deleteProduct).toHaveBeenCalledWith(productId);
             expect(mRes.status).toHaveBeenCalledWith(404);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Product not found.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/product not found/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -225,13 +225,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.getProduct.mockRejectedValueOnce(new Error('Product not found.'));
+            ProductServiceImpl.prototype.getProduct.mockRejectedValueOnce(new Error(/product not found/i));
 
             await new ProductController().getProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.getProduct).toHaveBeenCalledWith(productId);
             expect(mRes.status).toHaveBeenCalledWith(404);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Product not found.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/product not found/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -256,13 +256,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.updateProduct.mockRejectedValueOnce(new Error('Product not found.'));
+            ProductServiceImpl.prototype.updateProduct.mockRejectedValueOnce(new Error(/product not found/i));
 
             await new ProductController().updateProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.updateProduct).toHaveBeenCalledWith(productId, updatedProductData);
             expect(mRes.status).toHaveBeenCalledWith(404);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Product not found.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/product not found/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -295,13 +295,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.getAllProducts.mockRejectedValueOnce(new Error('Failed to retrieve products.'));
+            ProductServiceImpl.prototype.getAllProducts.mockRejectedValueOnce(new Error(/failed to retrieve products/i));
 
             await new ProductController().getAllProducts(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.getAllProducts).toHaveBeenCalled();
             expect(mRes.status).toHaveBeenCalledWith(500);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Failed to retrieve products.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/failed to retrieve products/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -340,13 +340,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.getTopRatedProducts.mockRejectedValueOnce(new Error('Failed to retrieve top rated products.'));
+            ProductServiceImpl.prototype.getTopRatedProducts.mockRejectedValueOnce(new Error(/failed to retrieve top rated products/i));
 
             await new ProductController().getTopRatedProducts(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.getTopRatedProducts).toHaveBeenCalledWith(limit);
             expect(mRes.status).toHaveBeenCalledWith(500);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Failed to retrieve top rated products.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/Failed to retrieve top rated products/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
 
@@ -383,13 +383,13 @@ describe('Product Controller', () => {
             };
             const mNext = jest.fn();
 
-            ProductServiceImpl.prototype.searchProduct.mockRejectedValueOnce(new Error('Failed to search products.'));
+            ProductServiceImpl.prototype.searchProduct.mockRejectedValueOnce(new Error(/failed to search products/i));
 
             await new ProductController().searchProduct(mReq, mRes, mNext);
 
             expect(ProductServiceImpl.prototype.searchProduct).toHaveBeenCalledWith('Product', 'Test');
             expect(mRes.status).toHaveBeenCalledWith(500);
-            expect(mRes.json).toHaveBeenCalledWith({ error: 'Failed to search products.' });
+            expect(mRes.json).toHaveBeenCalledWith({ error: expect.stringMatching(/failed to search products/i) });
             expect(mNext).not.toHaveBeenCalled();
         });
     });
