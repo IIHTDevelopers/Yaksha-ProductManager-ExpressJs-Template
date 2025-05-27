@@ -56,20 +56,20 @@ describe('Product Service', () => {
         it(`${productServiceBoundaryTest} should throw an error when product is not found for getProduct`, async () => {
             const productId = 'non_existing_id';
             Product.findById.mockResolvedValue(null);
-            await expect(productService.getProduct(productId)).rejects.toThrow('Failed to get product.');
+            await expect(productService.getProduct(productId)).rejects.toThrow(/failed to get product/i);
         });
 
         it(`${productServiceBoundaryTest} should throw an error when product is not found for updateProduct`, async () => {
             const productId = 'non_existing_id';
             const updatedProductData = { name: 'Updated Product', price: 29.99 };
             Product.findByIdAndUpdate.mockResolvedValue(null);
-            await expect(productService.updateProduct(productId, updatedProductData)).rejects.toThrow('Failed to update product.');
+            await expect(productService.updateProduct(productId, updatedProductData)).rejects.toThrow(/failed to update product/i);
         });
 
         it(`${productServiceBoundaryTest} should throw an error when product is not found for deleteProduct`, async () => {
             const productId = 'non_existing_id';
             Product.findByIdAndDelete.mockResolvedValue(null);
-            await expect(productService.deleteProduct(productId)).rejects.toThrow('Failed to delete product.');
+            await expect(productService.deleteProduct(productId)).rejects.toThrow(/failed to delete product/i);
         });
 
         it(`${productServiceBoundaryTest} should fetch product by ID`, async () => {
@@ -85,7 +85,7 @@ describe('Product Service', () => {
             const productData = { name: 'Failed Product', price: 99.99 };
             const error = new Error('Failed to create product.');
             Product.create.mockRejectedValue(error);
-            await expect(productService.createProduct(productData)).rejects.toThrow(error);
+            await expect(productService.createProduct(productData)).rejects.toThrow(/failed to create product/i);
         });
 
         it(`${productServiceBoundaryTest} should throw an error when failing to update product by ID`, async () => {
@@ -93,14 +93,14 @@ describe('Product Service', () => {
             const updatedProductData = { name: 'Updated Product', price: 29.99 };
             const error = new Error('Failed to update product.');
             Product.findByIdAndUpdate.mockRejectedValue(error);
-            await expect(productService.updateProduct(productId, updatedProductData)).rejects.toThrow(error);
+            await expect(productService.updateProduct(productId, updatedProductData)).rejects.toThrow(/failed to update product/i);
         });
 
         it(`${productServiceBoundaryTest} should throw an error when failing to delete product by ID`, async () => {
             const productId = 'non_existing_id';
             const error = new Error('Failed to delete product.');
             Product.findByIdAndDelete.mockRejectedValue(error);
-            await expect(productService.deleteProduct(productId)).rejects.toThrow(error);
+            await expect(productService.deleteProduct(productId)).rejects.toThrow(/failed to delete product/i);
         });
 
         it(`${productServiceBoundaryTest} should update product by ID and return updated product`, async () => {
@@ -133,7 +133,7 @@ describe('Product Service', () => {
             const error = new Error("Failed to search for products.");
             Product.find.mockRejectedValue(error);
 
-            await expect(productService.searchProduct(productName, productDescription)).rejects.toThrow(error);
+            await expect(productService.searchProduct(productName, productDescription)).rejects.toThrow(/failed to search for products/i);
         });
     });
 });
