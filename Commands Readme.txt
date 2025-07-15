@@ -11,5 +11,3 @@ You can follow series of command to setup express environment once you are in yo
 * npm run jest -> To run all test cases and see the summary of all passed and failed test cases.
 
 * npm run test -> To run all test cases. It is mandatory to run this command before submission of workspace -> takes 5 to 6 min
-
-* You need to use CTRL+Shift+B - command compulsorily on code IDE, before final submission as well. This will push or save the updated contents in the internal git/repository, and will be used to evaluate the code quality.
